@@ -19,3 +19,5 @@
 *.gz
 
 combined.tex
+
+.kilo/

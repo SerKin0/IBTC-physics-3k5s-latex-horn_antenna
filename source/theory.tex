@@ -8,7 +8,7 @@ P(\theta, \varphi) = r^{2} S_{r}(\theta, \varphi),
 \]
 где $S_{r}$ --- радиальная компонента вектора Пойнтинга на большом расстоянии $r$ от антенны. ДН окончательно формируется в зоне Фраунгофера, определяемой соотношением
 \begin{align} \label{eq:th:1}
-	r \gg \frac{l^{2}}{\lambda}.
+	r \gg \frac{l^{2}}{{\lambda^{\text{т}}_{\text{с}}}}.
 \end{align}
 
 \begin{figure}[H]
@@ -32,7 +32,7 @@ P(\theta, \varphi) = r^{2} S_{r}(\theta, \varphi),
 
 \textit{Коэффициент направленного действия} $D$ характеризует выигрыш по мощности в направлении максимального излучения:
 \begin{align} \label{eq:th:2}
-	D = \frac{4\pi P(\theta_m, \varphi_m)}{\int\limits_{0}^{2\pi} \int\limits_{0}^{\pi} P(\theta, \varphi) \sin \theta \, d\varphi d\theta}.
+	D = \frac{4\pi P(\theta_m, \varphi_m)}{\int\limits_{0}^{2\pi} \int\limits_{0}^{\pi} P(\theta, \varphi) \sin \theta \, d\theta d\varphi}.
 \end{align}
 
 \textit{Коэффициент усиления} $G$ определяется как произведение КНД на КПД антенны $\eta$:
@@ -41,7 +41,7 @@ P(\theta, \varphi) = r^{2} S_{r}(\theta, \varphi),
 \end{align}
 где
 \begin{align} \label{eq:th:4}
-	\eta = \frac{P_{\text{изл}}}{P_{\text{подв}}} = \frac{\int\limits_{0}^{2\pi} \int\limits_{0}^{\pi} P(\theta, \varphi) \sin \theta \, d\varphi d\theta}{P_{\text{подв}}}.
+	\eta = \frac{P_{\text{изл}}}{P_{\text{подв}}} = \frac{\int\limits_{0}^{2\pi} \int\limits_{0}^{\pi} P(\theta, \varphi) \sin \theta \, d\theta d\varphi}{P_{\text{подв}}}.
 \end{align}
 
 В силу принципа взаимности ДН и КНД антенны в режимах передачи и приёма совпадают.
@@ -53,7 +53,7 @@ P(\theta, \varphi) = r^{2} S_{r}(\theta, \varphi),
 
 Величины $A$ и $D$ связаны соотношением
 \begin{align} \label{eq:th:6}
-	A = \frac{\lambda^2}{4\pi} D.
+	A = \frac{\bigl(\lambda^{\text{т}}_{\text{с}}\bigr)^2}{4\pi} D.
 \end{align}
 
 Цель работы --- экспериментальное определение КНД пирамидальной рупорной антенны зеркальным методом (методом Парселла) и сравнение с теоретическим расчётом. Метод опирается на идеально отражающую плоскую поверхность в зоне Фраунгофера, ориентированную параллельно излучающей апертуре (см.~\cref{fig:2}).
@@ -67,11 +67,11 @@ P(\theta, \varphi) = r^{2} S_{r}(\theta, \varphi),
 
 Согласно методу изображений, отыскание отражённого поля сводится к нахождению поля от зеркальной антенны. В результате пересчёта мощность, принимаемая антенной, равна $P_{\text{пр}} = ADP_{\text{изл}}/(16\pi X^2)$. С учётом \cref{eq:th:6} получаем
 \begin{align} \label{eq:th:7}
-	\frac{P_{\text{пр}}}{P_{\text{изл}}} = \frac{D^2\lambda^2}{64\pi^2 X^2},
+	\frac{P_{\text{пр}}}{P_{\text{изл}}} = \frac{D^2\bigl(\lambda^{\text{т}}_{\text{с}}\bigr)^2}{64\pi^2 X^2},
 \end{align}
 откуда
 \begin{align} \label{eq:th:8}
-	D = \frac{8\pi X}{\lambda} \sqrt{\frac{P_{\text{пр}}}{P_{\text{изл}}}}.
+	D = \frac{8\pi X}{{\lambda^{\text{т}}_{\text{с}}}} \sqrt{\frac{P_{\text{пр}}}{P_{\text{изл}}}}.
 \end{align}
 
 \begin{figure}[t]
@@ -81,11 +81,11 @@ P(\theta, \varphi) = r^{2} S_{r}(\theta, \varphi),
 	\label{fig:3}
 \end{figure}
 
-Измерительная установка включает генератор СВЧ диапазона ($\lambda \approx 3$ см), волноводный тракт с измерительной линией и индикатором, пирамидальный рупор, отражающий щит и щит с поглощающим покрытием (см.~\cref{fig:3}). Отражающий щит располагается в зоне Фраунгофера $X \gg l_{1,2}^2/\lambda$ и имеет размеры $L_{1,2} > X\Delta\theta_{1,2} \approx X\lambda/l_{1,2}$. Установка позволяет менять расстояние $X + \Delta X$ в пределах $\Delta X \sim 100$ см. В измерительной линии используется квадратичный детектор, поэтому показания индикатора пропорциональны $|E|^2$.
+Измерительная установка включает генератор СВЧ диапазона (${\lambda^{\text{т}}_{\text{с}}} \approx 3$ см), волноводный тракт с измерительной линией и индикатором, пирамидальный рупор, отражающий щит и щит с поглощающим покрытием (см.~\cref{fig:3}). Отражающий щит располагается в зоне Фраунгофера $X \gg l_{1,2}^2/{\lambda^{\text{т}}_{\text{с}}}$ и имеет размеры $L_{1,2} > X\Delta\theta_{1,2} \approx X{\lambda^{\text{т}}_{\text{с}}}/l_{1,2}$. Установка позволяет менять расстояние $X + \Delta X$ в пределах $\Delta X \sim 100$ см. В измерительной линии используется квадратичный детектор, поэтому показания индикатора пропорциональны $|E|^2$.
 
 В несогласованном режиме поле на оси волновода, нормированное на амплитуду падающей волны, записывается в виде
 \begin{align} \label{eq:th:11}
-	E = e^{-i jx} + \Gamma_k e^{i\varphi_k} e^{ihx} + \Gamma e^{i\varphi} e^{ihx},
+	E = e^{-ihx} + \Gamma_k e^{i\varphi_k} e^{ihx} + \Gamma e^{i\varphi} e^{ihx},
 \end{align}
 где $x$ --- координата от конца волноводного тракта (см.~\cref{fig:4}); $h$ --- постоянная распространения волны в волноводе; $\Gamma_k e^{i \varphi_k}$ --- коэффициент отражения от конца тракта; $\Gamma e^{i \varphi}$ --- коэффициент отражения, обусловленный отражающим щитом. Смещение антенны на $\Delta X$ приводит к появлению в последнем члене множителя $e^{ih_0 2\Delta X}$ ($h_0 = \omega/c$). В результате для $|E|^2$ имеем
 \begin{multline} \label{eq:th:12}
@@ -101,12 +101,12 @@ P(\theta, \varphi) = r^{2} S_{r}(\theta, \varphi),
 
 Поскольку $\Gamma_{\text{к}}$ и $\Gamma$ малы, квадратичными членами можно пренебречь:
 \begin{align} \label{eq:th:13}
-	|E|^2 \approx 1 + 2\Gamma_{k}\cos(2hx + \varphi_{k}) + 2\Gamma\cos(2hx + \varphi + k_0 2\Delta X).
+	|E|^2 \approx 1 + 2\Gamma_{k}\cos(2hx + \varphi_{k}) + 2\Gamma\cos(2hx + \varphi + h_0 2\Delta X).
 \end{align}
 
 КНД однозначно определяется коэффициентом $\Gamma$:
 \begin{align} \label{eq:th:14}
-	D = \frac{8\pi X}{\lambda} \Gamma.
+	D = \frac{8\pi X}{{\lambda^{\text{т}}_{\text{с}}}} \Gamma.
 \end{align}
 
 \subsection{Теоретический расчет КНД}
@@ -119,26 +119,26 @@ P(\theta, \varphi) = r^{2} S_{r}(\theta, \varphi),
 \end{align}
 где $G = e^{ikr}/r$ --- функция Грина свободного пространства. Поверхность $S$ проходит через апертуру антенны и удаляется на бесконечность в остальном пространстве. Рассматривая малые отклонения от центральной оси, интеграл приводится к виду
 \begin{align} \label{eq:th:1.2}
-	\Psi(P) = \frac{\Psi_0 \exp \{ikz_0\}}{z_0 \lambda_i} \iint_\Sigma \exp \left\{\frac{ik}{2z_0}(x^2 + y^2)\right\}\, dxdy,
+	\Psi(P) = \frac{\Psi_0 \exp \{ikz_0\}}{i z_0 {\lambda^{\text{т}}_{\text{с}}}} \iint_\Sigma \exp \left\{\frac{ik}{2z_0}(x^2 + y^2)\right\}\, dxdy,
 \end{align}
 где $\Sigma$ --- площадь апертуры. Интегралы Френеля в первом приближении дают значение площади апертуры, поэтому
 \begin{align} \label{eq:th:1.3}
-	\Psi(P) \simeq \frac{\Psi_0}{z_0 \lambda_i} S e^{ikz_0}.
+	\Psi(P) \simeq \frac{\Psi_0}{i z_0 {\lambda^{\text{т}}_{\text{с}}}} S e^{ikz_0}.
 \end{align}
 
 Плотность потока энергии в максимуме:
 \begin{align} \label{eq:th:1.4}
-	S_{\max} = \frac{c}{8\pi} \frac{\Psi_0^2 S^2}{r^2 \lambda^2}.
+	S_{\max} = \frac{c}{8\pi} \frac{\Psi_0^2 S^2}{r^2 \bigl(\lambda^{\text{т}}_{\text{с}}\bigr)^2}.
 \end{align}
 
 Для эквивалентного изотропного источника:
 \begin{align}\label{eq:th:1.5}
-	S_r = \frac{c}{8\pi} \frac{\Psi_0^2 S}{r^2 \lambda^2} \frac{1}{4\pi}.
+	S_r = \frac{c}{8\pi} \frac{\Psi_0^2 S}{r^2} \frac{1}{4\pi}.
 \end{align}
 
-Подставляя в выражение для КНД, получаем:
+Подставляя в выражение для КНД экспериментальную длину волны ${\lambda^{\text{п}}_{\text{с}}} \approx 3{,}3$~см (с округлением), получаем:
 \begin{align} \label{eq:th:1.6}
-	D = \frac{S_{\max}}{S_r} = \frac{S}{\lambda^2} 4 \pi
+	D = \frac{S_{\max}}{S_r} = \frac{S}{\bigl(\lambda^{\text{п}}_{\text{с}}\bigr)^2} 4 \pi
 	= \frac{4\pi \cdot 9{,}2 \cdot 13{,}4}{3{,}3^2}
 	= \frac{4\pi \cdot 123{,}28}{10{,}89}
 	\approx 142{,}3.
